@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overall_Rating__c</fullName>
+    <externalId>false</externalId>
+    <formula>( Trainee_Music_Composition_Rating__c  +  Trainee_Dance_Rating__c  +  Trainee_Foreign_Language_Competency__c  +  Trainee_Vocals_Rating__c  )  / 4</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Overall Rating</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

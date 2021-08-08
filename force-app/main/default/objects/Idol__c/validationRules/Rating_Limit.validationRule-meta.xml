@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_Limit</fullName>
+    <active>true</active>
+    <description>Must keep the ratings at values between 1 and 10</description>
+    <errorConditionFormula>Trainee_Dance_Rating__c &lt; 0  ||  Trainee_Dance_Rating__c   &gt; 10</errorConditionFormula>
+    <errorDisplayField>Trainee_Dance_Rating__c</errorDisplayField>
+    <errorMessage>Rating must be between 0 and 10</errorMessage>
+</ValidationRule>

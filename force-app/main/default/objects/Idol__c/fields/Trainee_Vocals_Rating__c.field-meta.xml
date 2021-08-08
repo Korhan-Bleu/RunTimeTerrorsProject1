@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trainee_Vocals_Rating__c</fullName>
+    <description>Used to rate the vocal talent of an idol trainee on a scale from 1 to 10</description>
+    <externalId>false</externalId>
+    <label>Trainee Vocals Rating</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

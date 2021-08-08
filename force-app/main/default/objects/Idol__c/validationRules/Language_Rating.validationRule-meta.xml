@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Language_Rating</fullName>
+    <active>true</active>
+    <errorConditionFormula>Trainee_Foreign_Language_Competency__c &lt; 0  ||   Trainee_Foreign_Language_Competency__c  &gt; 10</errorConditionFormula>
+    <errorDisplayField>Trainee_Foreign_Language_Competency__c</errorDisplayField>
+    <errorMessage>Rating must be between 0 and 10</errorMessage>
+</ValidationRule>

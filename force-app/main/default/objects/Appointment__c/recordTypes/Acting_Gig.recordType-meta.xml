@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acting_Gig</fullName>
+    <active>true</active>
+    <description>To be used when an idol acts in a film or show</description>
+    <label>Acting Gig</label>
+</RecordType>
