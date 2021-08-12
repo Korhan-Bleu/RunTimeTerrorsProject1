@@ -39,5 +39,13 @@
         ApexTrigger 
         </name>
     </types>
+    <types>
+        <members>
+        Public_Relation_Record_Page
+        </members>
+        <name>
+        FlexiPage
+        </name>
+    </types>
     <version>52.0</version>
 </Package>
