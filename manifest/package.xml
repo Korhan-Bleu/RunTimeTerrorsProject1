@@ -50,14 +50,6 @@
     <types>
         <members>*</members>
         <name>Layout</name>
-   </types>
-   <types>
-        <members>*</members>
-        <name>Settings</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>AssignmentRules</name>
     </types>
     <version>52.0</version>
 </Package>
