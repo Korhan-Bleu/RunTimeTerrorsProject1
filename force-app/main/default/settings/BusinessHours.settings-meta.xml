@@ -20,19 +20,4 @@
         <wednesdayEndTime>00:00:00.000Z</wednesdayEndTime>
         <wednesdayStartTime>00:00:00.000Z</wednesdayStartTime>
     </businessHours>
-    <holidays>
-        <description>Happy Christmas</description>
-        <isRecurring>true</isRecurring>
-        <name>Christmas</name>
-        <recurrenceDayOfMonth>25</recurrenceDayOfMonth>
-        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
-        <recurrenceStartDate>2021-12-25</recurrenceStartDate>
-        <recurrenceType>RecursYearly</recurrenceType>
-    </holidays>
-    <holidays>
-        <activityDate>2021-09-22</activityDate>
-        <description>Happy Chuseok!</description>
-        <isRecurring>false</isRecurring>
-        <name>Chuseok</name>
-    </holidays>
 </BusinessHoursSettings>

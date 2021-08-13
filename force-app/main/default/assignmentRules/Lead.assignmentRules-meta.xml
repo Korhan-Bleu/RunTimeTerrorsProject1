@@ -4,7 +4,7 @@
         <fullName>Standard</fullName>
         <active>true</active>
         <ruleEntry>
-            <assignedTo>stephen.pryor@wise-wolf-oh9fcd.com</assignedTo>
+            <assignedTo>tylarharmon@cunning-goat-6r6ct5.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Lead.Country</field>
@@ -13,7 +13,7 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>stephen.pryor@wise-wolf-oh9fcd.com</assignedTo>
+            <assignedTo>tylarharmon@cunning-goat-6r6ct5.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Lead.Country</field>
