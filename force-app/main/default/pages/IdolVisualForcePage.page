@@ -1,0 +1,8 @@
+<apex:page standardController="Idol__c">
+    <apex:pageBlock title="Hello">
+        <apex:pageBlockSection >
+            Name: {!Idol__c.name}
+            Idol Phone# : {!Idol__c.Idol_Phone__c}
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
