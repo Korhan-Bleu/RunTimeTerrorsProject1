@@ -1,12 +1,12 @@
 public with sharing class IdolControllerExtension {
     
-    Idol__c idol;
+    public Idol__c idol{ get; set;}
     public IdolControllerExtension(ApexPages.StandardController controller){
         this.idol = (Idol__c) controller.getRecord();
     }
 
-
-    private String sortOrder = 'Name';
+	
+    @testVisible private String sortOrder = 'Name';
     
     public List<Idol__c> getIdols() {
         String retrieveFields = 'Name, Id, Idol_Phone__c, Assigned_Location__c, Date_recruited__c, Idol_Pay__c';
