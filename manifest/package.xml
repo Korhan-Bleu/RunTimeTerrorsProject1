@@ -51,5 +51,10 @@
         <members>*</members>
         <name>Layout</name>
     </types>
+    <types>
+        <members>pickIdols</members>
+        <name>ApexPage</name>
+    </types>
+
     <version>52.0</version>
 </Package>

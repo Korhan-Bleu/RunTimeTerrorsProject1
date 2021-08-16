@@ -1,0 +1,26 @@
+<apex:page controller="pickIdols_CC">
+    <apex:form >
+        <apex:pageBlock title="Public Relations">
+            Idol Names:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:selectList value="{!selectedIdolId}" size="1">
+                <apex:selectOptions value="{!IdolNames}"/>
+            </apex:selectList>
+            
+            <apex:commandButton value="Show Records" action="{!ShowTable}"/>
+            
+            <br/><br/>
+            Idol Records: <br/><br/>
+            
+            <apex:pageBlockTable value="{!prRecords}" var="var">
+                <apex:column headerValue="Event Name">
+                    <apex:outputLink value="/{!var.Id}" target="_New">{!var.Name}</apex:outputLink>
+                    </apex:column>
+                <apex:column headerValue="Details" value="{!var.Details__c}"/>
+                <apex:column headerValue="Idol Group" value="{!var.Idol_Group__c}"/>
+                <apex:column headerValue="Date" value="{!var.Date__c}"/>
+                
+            </apex:pageBlockTable>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
