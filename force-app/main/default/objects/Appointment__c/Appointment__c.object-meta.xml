@@ -86,7 +86,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
-        <type>Default</type>
+        <content>AppPageWiz</content>
+        <skipRecordTypeSelect>true</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
@@ -143,7 +145,7 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>To be used when setting up appointments with clients</description>
+    <description>To be used when setting up appointments</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
