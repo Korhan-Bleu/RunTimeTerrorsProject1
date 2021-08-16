@@ -2,10 +2,11 @@ public with sharing class newAppointmentExtension{
     //member variables to maintain the state of the wizard
     Appointment__c app;
     Logistic__c log;
-  
-      public newAppointmentExtension(ApexPages.StandardController stdController) {
+    
+    public newAppointmentExtension(ApexPages.StandardController stdController) {
         this.app = (Appointment__c)stdController.getRecord();
     }
+
   
     //return of member variables to create empty record for the variable if its called for the first time 
     public Appointment__c getAppointment(){
