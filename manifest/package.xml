@@ -53,8 +53,8 @@
     </types>
     <types>
         <members>pickIdols</members>
+        <members>IdolCreatedMessage</members>
         <name>ApexPage</name>
     </types>
-
     <version>52.0</version>
 </Package>
