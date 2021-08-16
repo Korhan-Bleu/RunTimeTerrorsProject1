@@ -1,4 +1,4 @@
-# PROJECT NAME
+# SJP Entertainment Interal Employee Portal
 
 ## Project Description
 
@@ -6,25 +6,31 @@ Here goes your awesome project description!
 
 ## Technologies Used
 
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* VS Code - version 1.0
+* GitHub Repository - version 2.0
+* Experience Cloud Site - version 3.0
 
 ## Features
 
 List of features ready and TODOs for future development
-* Awesome feature 1
+* The public Relations DB Visual Force Page allows the user to select an idol from a list of current Idols from SJP and a table surfaces with information displaying all the Public Relation events relating to the     * idol. A link that displays the Public Relation event name takes the user to the detail page for the event, allowing for more granular detail.
 * Awesome feature 2
 * Awesome feature 3
 
 To-do list:
-* Wow improvement to be done 1
+* For the Public Relations DB, future implementaitons will allow the user to be redirected to a new VFP that will
+* display the detail information for the event versus taking the user to the org itself.
 * Wow improvement to be done 2
 
 ## Getting Started
    
 (include git clone command)
+- Git clone command
+- git clone [url]
 (include all environment setup steps)
+- Open Visual studio Code
+- Using command palette, make a new 
+- Make a new project using the SFDX
 
 > Be sure to include BOTH Windows and Unix command  
 > Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
@@ -38,7 +44,11 @@ To-do list:
 
 ## Contributors
 
-> Here list the people who have contributed to this project. (ignore this section, if its a solo project)
+> Tylar Harmon
+> Stephen Pryor
+> Denver Leyba
+> Kyle Reid
+> Brian Mckay
 
 ## License
 
