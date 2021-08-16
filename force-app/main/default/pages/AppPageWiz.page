@@ -1,0 +1,36 @@
+<apex:page standardController="Appointment__c" tabStyle="Appointment__c" extensions="newAppointmentExtension" wizard="true">
+  <script>    
+      function confirmCancel() {
+      var isCancel = confirm("Are you sure you wish to cancel?");
+      if (isCancel) return true;
+  
+     return false;
+  }  
+  </script>
+
+    <apex:sectionHeader title="New Appointment" subtitle="Step 1 of 2"/>
+    <apex:form >
+        <apex:pageBlock title="Appointment Information" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!logCreation}" value="Next"/>
+                <apex:commandButton action="{!cancel}" value="Cancel" onclick="return confirmCancel()" immediate="true"/>
+            </apex:pageBlockButtons>
+        <apex:pageblockSection >
+            <apex:inputField value="{!Appointment.name}"/>
+            <apex:inputField value="{!Appointment.Idol__c}"/>
+            <apex:inputField value="{!Appointment.Idol_Group__c}"/>
+            <apex:inputField value="{!Appointment.Date_And_Time__c}"/>
+            <apex:inputField value="{!Appointment.Managing_Location__c}"/>
+            <apex:inputField value="{!Appointment.Concert_Set__c}"/>
+            <apex:inputField value="{!Appointment.Estimated_Movie_Release__c}"/>
+            <apex:inputField value="{!Appointment.Payment_Rendered__c}"/>
+            <apex:inputField value="{!Appointment.Client_Name__c}"/>
+            <apex:inputField value="{!Appointment.Contact_Phone_Number__c}"/>
+            <apex:inputField value="{!Appointment.Contact_Email__c}"/>
+            
+        </apex:pageblockSection>
+        </apex:pageBlock>
+    </apex:form>
+
+
+</apex:page>
