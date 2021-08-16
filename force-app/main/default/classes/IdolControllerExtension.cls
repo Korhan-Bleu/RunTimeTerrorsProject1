@@ -32,7 +32,7 @@ public with sharing class IdolControllerExtension {
     }
 
     public PageReference Create(){
-        PageReference page = new PageReference('/apex/CreateIdolPage');
+        PageReference page = new PageReference('/apex/CreatedIdolPage');
         page.setRedirect(true);
         return page;
     }
