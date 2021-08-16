@@ -1,0 +1,29 @@
+<apex:page standardController="Appointment__c" extensions="newAppointmentExtension" wizard="true">
+  <script>
+  function confirmCancel() {
+      var isCancel = confirm("Are you sure you wish to cancel?");
+      if (isCancel) return true;
+  
+     return false;
+  }  
+  </script>
+  <apex:sectionHeader title="Appointment Logistics" subtitle="Step 2 of 2"/>
+  <apex:form >
+      <apex:pageBlock title="Logistical Information" mode="edit">
+          <apex:pageBlockButtons >
+              <apex:commandButton action="{!appCreation}" value="Previous"/>
+              <apex:commandButton action="{!save}" value="Save"/>
+              <apex:commandButton action="{!cancel}" value="Cancel" onclick="return confirmCancel()" immediate="true"/>
+          </apex:pageBlockButtons>
+          <apex:pageBlockSection >
+            <apex:inputField value="{!Logistic.Name}"/>
+            <apex:inputField value="{!Logistic.Nature_of_the_Issue__c}"/>
+            <apex:inputField value="{!Logistic.Equipment_Needed__c}"/>
+            <apex:inputField value="{!Logistic.Estimated_Cost__c}"/>
+            <apex:inputField value="{!Logistic.Date__c}"/>
+            <apex:inputField value="{!Logistic.Office__c}"/>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+
+</apex:page>
