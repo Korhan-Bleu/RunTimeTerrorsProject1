@@ -3,7 +3,7 @@ trigger newIdolOrientation ON Idol__c(after insert) {
     Appointment__c A = new Appointment__c();
     Idol__c W = new Idol__c();
     for(Idol__c i: Trigger.new){
-        A.RecordTypeId = '0125e000000NC6VAAW';
+        A.RecordTypeId = '0125e000000uscxAAA';
         A.Name = 'Orientation for ' + i.Name;
         idolApp.add(A);
     }
