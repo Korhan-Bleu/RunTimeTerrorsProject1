@@ -98,4 +98,56 @@ public with sharing class newAppointmentExtensionTest {
  
          System.assertEquals(expected, actual);
     }
+
+    @isTest static void VerifyCreate(){
+        //dummy idol controller
+        Appointment__c logs = new Appointment__c();
+        //calls the current page
+        Test.setCurrentPage(Page.LogPageWiz);
+        //Create a standard controller with the dummy controller
+        ApexPages.StandardController logController = new ApexPages.StandardController(logs);
+        
+        //Get the standard controller and pass it through the controller extension
+        newAppointmentExtension test = new newAppointmentExtension(logController);
+        
+        System.Test.StartTest();
+        PageReference testPage = test.logCreation(); 
+        System.Test.StopTest();
+        
+        System.assertEquals('/apex/logpagewiz', testPage.getUrl());
+    }
+    @isTest static void VerifyAppPage(){
+        //dummy idol controller
+        Appointment__c app = new Appointment__c();
+        //calls the current page
+        Test.setCurrentPage(Page.AppPageWiz);
+        //Create a standard controller with the dummy controller
+        ApexPages.StandardController appController = new ApexPages.StandardController(app);
+        
+        //Get the standard controller and pass it through the controller extension
+        newAppointmentExtension test = new newAppointmentExtension(appController);
+        
+        System.Test.StartTest();
+        PageReference testPage = test.appCreation(); 
+        System.Test.StopTest();
+        
+        System.assertEquals('/apex/apppagewiz', testPage.getUrl());
+    }
+    @isTest static void VerifyCancel(){
+        //dummy idol controller
+        Appointment__c app = new Appointment__c();
+        //calls the current page
+        Test.setCurrentPage(Page.AppPageWiz);
+        //Create a standard controller with the dummy controller
+        ApexPages.StandardController appController = new ApexPages.StandardController(app);
+        
+        //Get the standard controller and pass it through the controller extension
+        newAppointmentExtension test = new newAppointmentExtension(appController);
+        
+        System.Test.StartTest();
+        PageReference testPage = test.cancel(); 
+        System.Test.StopTest();
+        
+        System.assertEquals('/006', testPage.getUrl());
+    }
 }

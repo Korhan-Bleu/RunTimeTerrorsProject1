@@ -35,7 +35,7 @@ public with sharing class newAppointmentExtension{
         insert app;
         insert log;
 
-    //send user to detail page for new opportunity
+    //send user to detail page for new appointment
 
        PageReference appPage = new ApexPages.StandardController(app).view();
        appPage.setRedirect(true);
