@@ -1,0 +1,34 @@
+<apex:page controller="LookupLocation_CC" >
+    
+    <!--> <p style="text-align:center; font-size:72px;">
+SJP Entertainment Locations
+</p>
+<apex:image value="{!$Resource.Logo}" height="158" width="202" style="display:block; justify-content:right; align-items:right;"/><!-->
+    
+    <apex:pageBlock mode="maindetail" title="SJP Entertainment Locations"  >
+        <br/>
+        <apex:pageBlockSection >
+            <apex:pageBlockTable value="{!findLocations}" var="l" columns="3">
+                <apex:column headerValue="Location Name" value="{!l.Name}"/>
+                <apex:column headerValue="Location Type" value="{!l.Location_Type__c}"/>
+                <apex:column headerValue="Location Address">
+                    <apex:outputLink value="{!l.Address__c}">{!l.Address__c}</apex:outputLink>
+                </apex:column>
+            </apex:pageBlockTable>
+            <br/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock mode="maindetail">
+        
+        <apex:form >
+            <apex:pageBlock title="Create New Location">
+            <apex:pageBlockSection >
+            <apex:inputField label="Location Name" value="{!location.Name}" /> <br/>
+            <apex:inputField label="Location Type" value="{!location.Location_Type__c}" /> <br/>
+            <apex:inputField label="Location Address" value="{!location.Address__c}" /> <br/>
+            <apex:commandButton value="Create Location" action="{!saveDetails}" oncomplete="window.top.location.reload()" />
+                </apex:pageBlockSection>
+                </apex:pageBlock>
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>
