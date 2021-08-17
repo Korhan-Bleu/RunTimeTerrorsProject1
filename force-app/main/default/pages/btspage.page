@@ -1,0 +1,19 @@
+<apex:page controller="btsController">
+ <apex:form>
+    <apex:pageBlock title="Idols from BTS">
+        <apex:pageBlockSection>
+            <apex:outputLink value="https://www.youtube.com/channel/UCLkAepWjdylmXSltofFvsYQ">BTS Youtube Channel</apex:outputLink>
+        </apex:pageBlockSection>
+            <apex:pageBlock >
+               <apex:pageBlockSection title="Members">
+                 <apex:pageBlockTable value="{!idolbts}" var="i">
+                   <apex:column value="{!i.Name}"/>
+                 </apex:pageBlockTable>
+                </apex:pageBlockSection>
+             </apex:pageBlock >
+        <apex:pageBlockSection>
+          <apex:image url="{!URLFOR($Resource.groups, 'groups/bts.jpg')}" width="400"></apex:image>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+ </apex:form>
+</apex:page>
