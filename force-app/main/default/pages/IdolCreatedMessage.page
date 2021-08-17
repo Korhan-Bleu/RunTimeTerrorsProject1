@@ -1,0 +1,7 @@
+<apex:page standardController="Idol__c" extensions="IdolControllerExtension">
+    <apex:form>
+        <apex:pageBlock title="Idol Created">
+            <apex:commandButton action="{!Back}" value="Go Back"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
