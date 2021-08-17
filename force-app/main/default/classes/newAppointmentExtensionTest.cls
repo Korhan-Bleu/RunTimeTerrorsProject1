@@ -78,9 +78,24 @@ public with sharing class newAppointmentExtensionTest {
         Logistic__c actual = newApp.getLogistic();
         System.assertEquals(expected, actual);
 
-        
     }
+    @isTest
     static void getLogisticTestNegative(){
-        
+        // Test data setup
+        Logistic__c expected = new Logistic__c(name='test log');
+ 
+         Appointment__c ap = new Appointment__c();
+         ApexPages.StandardController app = new ApexPages.StandardController(ap);
+         // perform test
+         // make a new test to use that is not null
+         Logistic__c testAp = new Logistic__c(name='test log'); 
+         newAppointmentExtension newApp = new newAppointmentExtension(app);
+         newApp.log = testAp;
+         Logistic__c actual = newApp.getLogistic();
+         System.debug('expected ->' + expected);
+         System.debug('actual ->' + actual);
+         // Verify
+ 
+         System.assertEquals(expected, actual);
     }
 }
