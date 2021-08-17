@@ -1,7 +1,7 @@
 public with sharing class newAppointmentExtension{
     //member variables to maintain the state of the wizard
-    Appointment__c app;
-    Logistic__c log;
+    public Appointment__c app;
+    public Logistic__c log;
   
       public newAppointmentExtension(ApexPages.StandardController stdController) {
         this.app = (Appointment__c)stdController.getRecord();
