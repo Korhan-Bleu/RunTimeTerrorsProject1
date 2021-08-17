@@ -4,7 +4,7 @@ public with sharing class newAppointmentExtensionTest {
         //new dummy controller for the standardcontroler
         Appointment__c app = new Appointment__c();
         //calls the current page
-        Test.setCurrentPage(AppPageWiz);
+        Test.setCurrentPage(Page.AppPageWiz);
         //creation of standard controller with a dummy 
         Apexpages.StandardController appController = new Apexpages.StandardController(app);
         //get standard controller and pass it through the extension 
@@ -17,9 +17,9 @@ public with sharing class newAppointmentExtensionTest {
         test.app.Contact_Phone_Number__c = '2222222222';
         System.Test.stopTest();
 
-        Appointment__c verifyAppInsert = [SELECT Name FROM Appointment__c WHERE Name = 'test'];
+        List <Appointment__c> verifyAppInsert = [SELECT Name FROM Appointment__c WHERE Name = 'test'];
 
-        System.assertEquals(verifyAppInsert != NULL);
+        System.assert(verifyAppInsert != NULL);
 
     }
 
@@ -28,41 +28,59 @@ public with sharing class newAppointmentExtensionTest {
      static void getAppointmentTest(){
          // Test data setup
          //
-         Appointmentc expected = new Appointmentc();
+         Appointment__c expected = new Appointment__c();
  
  
-         Appointmentc ap = new Appointmentc();
+         Appointment__c ap = new Appointment__c();
          ApexPages.StandardController app = new ApexPages.StandardController(ap);
          // perform test
          // 
          newAppointmentExtension newApp = new newAppointmentExtension(app);
          newApp.app = null;
-         Appointmentc actual = newApp.getAppointment();
+         Appointment__c actual = newApp.getAppointment();
  
          // Verify
  
          System.assertEquals(expected, actual);
      }
      //test for the negative
-         @isTest
+     @isTest
      static void getAppointmentTestNegative(){
          // Test data setup
          //
-         Appointmentc expected = new Appointmentc(name='test App');
+         Appointment__c expected = new Appointment__c(name='test App');
  
-         Appointmentc ap = new Appointmentc();
+         Appointment__c ap = new Appointment__c();
          ApexPages.StandardController app = new ApexPages.StandardController(ap);
          // perform test
          //
          // make a new test to use that is not null
-         Appointmentc testAp = new Appointmentc(name='test App'); 
+         Appointment__c testAp = new Appointment__c(name='test App'); 
          newAppointmentExtension newApp = new newAppointmentExtension(app);
          newApp.app = testAp;
-         Appointmentc actual = newApp.getAppointment();
+         Appointment__c actual = newApp.getAppointment();
          System.debug('expected ->' + expected);
          System.debug('actual ->' + actual);
          // Verify
  
          System.assertEquals(expected, actual);
      }
+    @isTest
+    static void getLogisticTestPositive(){
+        //data setup
+        Logistic__c expected = new Logistic__c();
+        
+        Appointment__c ap = new Appointment__c();
+        ApexPages.StandardController app = new ApexPages.StandardController(ap);
+        // perform test
+        newAppointmentExtension newApp = new newAppointmentExtension(app);
+        newApp.log = null;
+        Logistic__c actual = newApp.getLogistic();
+        System.assertEquals(expected, actual);
+
+        
+    }
+    static void getLogisticTestNegative(){
+        
+    }
 }
